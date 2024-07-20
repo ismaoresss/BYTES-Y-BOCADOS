@@ -1,0 +1,123 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://img.freepik.com/foto-gratis/superficie-metal-rayado-estilo-grunge-oscuro_1048-12951.jpg");
+    background-size: cover;
+}
+
+.body-recibo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que ocupe al menos el alto de la ventana */
+    padding: 20px; /* Opcional: Añade un poco de espacio alrededor */
+}
+
+
+
+#wrapper {
+    min-height: 100vh; /* Para que el wrapper ocupe al menos toda la pantalla visible */
+    display: flex;
+    flex-direction: column;
+}
+
+.recibo-container {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+    .recibo-container h4 {
+        margin-bottom: 20px;
+    }
+
+.recibo-group {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.recibo-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.recibo-select,
+.recibo-input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.recibo-button {
+    width: 80%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .recibo-button:hover {
+        background-color: #218838;
+    }
+
+.recibo-back {
+    width: 80%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+    .recibo-back:hover {
+        background-color: #0056b3;
+    }
+
+.receipt {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid #000;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+    .receipt h1 {
+        margin-bottom: 20px;
+    }
+
+    .receipt p {
+        margin: 5px 0;
+    }
