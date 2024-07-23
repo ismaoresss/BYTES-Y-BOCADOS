@@ -5,40 +5,78 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="EstilosFiltrar.css" rel="stylesheet" />
     <style>
         .numero-mesa {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
-            color: #333;
+            color: #ffffff;
         }
+
         .filter-container {
             margin: 20px 0;
         }
+
         .input-filtrar {
             width: 100%;
         }
+
         .table-striped tbody tr:nth-of-type(odd) {
             background-color: #f9f9f9;
         }
+
         .table-striped tbody tr:nth-of-type(even) {
             background-color: #ffffff;
         }
+
         .error-message {
             color: red;
             font-weight: bold;
+        }
+
+        h3 {
+            font-size: 2em; /* Tamaño de fuente del h3 */
+            margin: 20px 0; /* Espaciado alrededor del h3 */
+            background-color: white;
+        }
+
+        h2 {
+            font-size: 2em; /* Tamaño de fuente del h2 */
+            margin: 20px 0; /* Espaciado alrededor del h2 */
+            background-color: white;
+        }
+
+
+        .Pedido-label h2 {
+            font-size: 2em; /* Tamaño de fuente del h3 */
+            margin: 20px 0; /* Espaciado alrededor del h3 */
+            background-color: transparent; /* Elimina el fondo blanco */
+            color: white; /* Color blanco del texto */
+        }
+
+        .total-label h3 {
+            font-size: 2em; /* Tamaño de fuente del h3 */
+            margin: 20px 0; /* Espaciado alrededor del h3 */
+            background-color: transparent; /* Elimina el fondo blanco */
+            color: white; /* Color blanco del texto */
+        }
+
+        h1.mb-4 {
+            color: white; /* Color blanco del texto */
         }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="filter-container">
-        <i class="fas fa-search">Buscar</i>
+        <%--<i class="fas fa-search">Buscar</i>--%>
         <asp:Label ID="LabelFiltrar" runat="server" Text="Filtrar Insumos:" CssClass="label-filtrar"></asp:Label>
         <asp:TextBox ID="Filtro" AutoPostBack="true" OnTextChanged="filtro_TextChanged" runat="server" CssClass="input-filtrar" />
     </div>
 
     <div class="container mt-5">
-        <h1 class="mb-4">Pedido para mesa <span id="numeroMesa" class="numero-mesa"><asp:Label ID="numeroMesaLabel" runat="server"></asp:Label></span></h1>
+        <h1 class="mb-4">Pedido para mesa <span id="numeroMesa" class="numero-mesa">
+            <asp:Label ID="numeroMesaLabel" runat="server"></asp:Label></span></h1>
 
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand" CssClass="table table-striped">
             <Columns>
@@ -52,7 +90,9 @@
             </Columns>
         </asp:GridView>
 
-        <h2 class="mt-5">Pedidos</h2>
+        <div class="Pedido-label">
+            <h2 class="mt-5">Pedidos</h2>
+        </div>
         <asp:GridView ID="GridViewPedidos" runat="server" CssClass="table table-striped" AutoGenerateColumns="false" OnRowCommand="GridViewPedidos_RowCommand">
             <Columns>
                 <asp:BoundField DataField="Insumo.Nombre" HeaderText="Nombre" />
@@ -73,7 +113,12 @@
             </Columns>
         </asp:GridView>
 
-        <h3 class="mt-5">Total: <asp:Label ID="TotalLabel" runat="server" Text=""></asp:Label></h3>
+        <div class="total-label">
+            <h3 class="mt-5">Total:
+            <asp:Label ID="TotalLabel" runat="server" Text=""></asp:Label>
+            </h3>
+        </div>
+
         <div class="row g-3">
             <div class="col-auto">
                 <asp:Button ID="BtnCerrarPedido" runat="server" CssClass="btn btn-outline-danger" Text="Cerrar pedido" OnClick="BtnCerrarPedido_Click" />
