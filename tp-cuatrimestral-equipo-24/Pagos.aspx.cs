@@ -47,5 +47,10 @@ namespace tp_cuatrimestral_equipo_24
             htext.Visible = true;
             divtext.Visible = true;
         }
+
+        protected void btnPdf_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

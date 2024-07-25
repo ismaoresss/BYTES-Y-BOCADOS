@@ -4,7 +4,8 @@
     <link href="EstiloPagos.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="body-recibo"> <!-- Asegúrate de que esta clase esté aplicada -->
+    <div class="body-recibo">
+        <!-- Asegúrate de que esta clase esté aplicada -->
         <div class="recibo-container">
             <h4>Formulario Pago</h4>
             <div class="recibo-group">
@@ -40,5 +41,9 @@
                 <p>GRACIAS!</p>
             </div>
         </div>
+
+
+        <asp:Button ID="btnPdf" runat="server" Text="Descargar" CssClass="recibo-button" Visible="false" OnClick="btnPdf_Click" />
+
     </div>
 </asp:Content>

@@ -251,43 +251,7 @@ namespace Negocio
         }
 
 
-        //public void Agregar(Insumo nuevoarticulo)
-        //{
-        //    AccesoDatos Accesodatos = new AccesoDatos();
-        //    try
-        //    {
-
-        //        Accesodatos.setearConsulta("Insert into ARTICULOS(Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@Precio)");
-        //        Accesodatos.setearParametros("@Codigo", nuevoarticulo.Codigo);
-        //        Accesodatos.setearParametros("@Nombre", nuevoarticulo.Nombre);
-        //        Accesodatos.setearParametros("@Descripcion", nuevoarticulo.descripcion);
-        //        Accesodatos.setearParametros("@IdMarca", nuevoarticulo.idMarca.Id);
-        //        Accesodatos.setearParametros("@IdCategoria", nuevoarticulo.idCategoria.Id);
-        //        Accesodatos.setearParametros("@Precio", nuevoarticulo.Precio);
-        //        Accesodatos.ejecutarAccion();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        Accesodatos.CerrarConexion();
-
-
-        //    }
-        //    {
-
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        Accesodatos.CerrarConexion();
-
-
-        //    }
+        
 
     }
     }
